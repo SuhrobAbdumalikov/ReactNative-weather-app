@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ReactNative-weather-app",
-    "slug": "ReactNative-weather-app",
+    "name": "DailyWeather",
+    "slug": "dailyweather",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -25,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d8260cc2-67e9-42f1-b40b-26470a713a80"
+      }
+    },
+    "owner": "suxrob"
   }
 }
