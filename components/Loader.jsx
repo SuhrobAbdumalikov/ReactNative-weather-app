@@ -6,13 +6,11 @@ function Loader() {
     <View style={styles.loadingContent}>
       <AnimatedLoader
         visible={true}
-        overlayColor="rgba(255,255,255,0.9)"
+        overlayColor="rgb(0,0,0)"
         source={require("../assets/loader.json")}
         animationStyle={styles.Lottie}
         speed={1}
-      >
-        <Text style={styles.loadingText}>loading...</Text>
-      </AnimatedLoader>
+      ></AnimatedLoader>
     </View>
   );
 }

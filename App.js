@@ -13,6 +13,7 @@ export default function App() {
 
   //get weather=============>>
   const getWeather = async (latitude, longitude) => {
+    setIsloading(true);
     const { data } = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${Api_key}&units=metric`
     );
@@ -22,10 +23,12 @@ export default function App() {
 
   //set weather=============>>
   const setWeather = async (city) => {
+    setIsloading(true);
     const { data } = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${Api_key}&units=metric`
     );
     setlocation(data);
+    setIsloading(false);
   };
 
   //get current location==========>>
@@ -43,6 +46,7 @@ export default function App() {
       getWeather(latitude, longitude);
     } catch (error) {
       Alert.alert("I can`t find your location! Sorry :(");
+      return;
     }
   };
 
@@ -54,7 +58,7 @@ export default function App() {
 
   return isloading ? (
     <Loader />
-  ) : (
+  ) : location.id ? (
     <Weather
       setWeather={setWeather}
       weatherTemp={Math.floor(location.main.temp)}
@@ -62,6 +66,8 @@ export default function App() {
       cityName={location.name}
       country={location.sys.country}
     />
+  ) : (
+    <></>
   );
 }
 

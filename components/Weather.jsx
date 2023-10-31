@@ -31,7 +31,7 @@ export const weatherConditions = {
     colorGradient: ["#3a7bd5", "#3a6073"],
     title: "Rainy Day",
     description: "Take un Umbrella",
-    iconColor: "blue",
+    iconColor: "white",
   },
   Rain: {
     icon: "weather-pouring",
@@ -57,16 +57,16 @@ export const weatherConditions = {
   Dust: {
     icon: "weather-windy-variant",
     colorGradient: ["#b79891", "#94716b"],
-    title: "Dusty",
+    title: "Dusty day",
     description: "You should not go outside!",
     iconColor: "white",
   },
   Smoke: {
     icon: "weather-windy",
     colorGradient: ["#56ccf2", "#2f80ed"],
-    title: "Sunny Day",
+    title: "Smoky Day",
     description: "You should go for a walk :)",
-    iconColor: "orange",
+    iconColor: "white",
   },
   Mist: {
     icon: "weather-fog",
